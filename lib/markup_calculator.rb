@@ -1,4 +1,6 @@
 require 'personnel_markup'
+require 'industry_specific_markup'
+
 class MarkupCalculator
   FLAT_MARKUP_PERCENTAGE = 5
 
