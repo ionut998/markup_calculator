@@ -1,5 +1,4 @@
 require_relative 'spec_helper'
-require 'personnel_markup'
 
 describe PersonnelMarkup do
   describe '#total_value' do

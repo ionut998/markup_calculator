@@ -1,5 +1,4 @@
 require_relative 'spec_helper'
-require 'markup_calculator'
 
 describe MarkupCalculator do
   subject(:markup_calculator) do

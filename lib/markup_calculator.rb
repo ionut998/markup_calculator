@@ -1,3 +1,4 @@
+require 'personnel_markup'
 class MarkupCalculator
   FLAT_MARKUP_PERCENTAGE = 5
 
