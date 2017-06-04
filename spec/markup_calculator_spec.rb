@@ -4,12 +4,14 @@ describe MarkupCalculator do
   subject(:markup_calculator) do
     MarkupCalculator.new(
       base_price,
-      number_of_people
+      number_of_people,
+      industry
     )
   end
 
   let(:base_price){ 100 }
   let(:number_of_people){ 1 }
+  let(:industry){ :pharmaceuticals }
 
   it { is_expected.to respond_to(:repackaging_price) }
 
@@ -28,6 +30,16 @@ describe MarkupCalculator do
 
     it "returns the value of personnel markup" do
       expect(subject.personnel_markup.round(2)).to eq( 3.6 )
+    end
+  end
+
+  describe '#industry_specific_markup' do
+    before do
+      allow(subject).to receive(:price_including_flat_markup).and_return(100)
+    end
+
+    it "returns the value of industry specific markup" do
+      expect(subject.industry_specific_markup).to eq( 7.5 )
     end
   end
 end

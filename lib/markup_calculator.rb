@@ -4,9 +4,10 @@ require 'industry_specific_markup'
 class MarkupCalculator
   FLAT_MARKUP_PERCENTAGE = 5
 
-  def initialize(base_price, number_of_people)
+  def initialize(base_price, number_of_people, industry)
     @base_price = base_price
     @number_of_people = number_of_people
+    @industry = industry
   end
 
   def repackaging_price
@@ -18,5 +19,9 @@ class MarkupCalculator
 
   def personnel_markup
     PersonnelMarkup.total_value(price_including_flat_markup, @number_of_people)
+  end
+
+  def industry_specific_markup
+    IndustrySpecificMarkup.total_value(price_including_flat_markup, @industry)
   end
 end
