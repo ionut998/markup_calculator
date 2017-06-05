@@ -16,6 +16,14 @@ bundle install
 bundle exec rspec
 ```
 
+## Usage example
+
+```bash
+irb
+require './lib/markup_calculator'
+MarkupCalculator.new(1_299.99, 3, :food).repackaging_price
+```
+
 ## Solution Overview
 
 The class that does the repackaging price calculation is `MarkupCalculator`. It accepts the `base_price`, the `number_of_people` and the `industry` and based on these, it calculates the repackaging price. The repackaging price is calculated as the sum of base_price, flat markup amount, personnel markup amount and industry specific markup amount.
