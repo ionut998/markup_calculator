@@ -11,6 +11,7 @@ class MarkupCalculator
   end
 
   def repackaging_price
+    (price_including_flat_markup + personnel_markup + industry_specific_markup).round(2)
   end
 
   def price_including_flat_markup
