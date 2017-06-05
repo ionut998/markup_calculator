@@ -1,6 +1,6 @@
-require 'industry_specific_markups/food'
-require 'industry_specific_markups/electronics'
-require 'industry_specific_markups/pharmaceuticals'
+require_relative 'industry_specific_markups/food'
+require_relative 'industry_specific_markups/electronics'
+require_relative 'industry_specific_markups/pharmaceuticals'
 
 class IndustrySpecificMarkup
   INDUSTRY_SPECIFIC_MARKUPS_RULES = [

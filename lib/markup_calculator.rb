@@ -1,5 +1,5 @@
-require 'personnel_markup'
-require 'industry_specific_markup'
+require_relative 'personnel_markup'
+require_relative 'industry_specific_markup'
 
 class MarkupCalculator
   FLAT_MARKUP_PERCENTAGE = 5
